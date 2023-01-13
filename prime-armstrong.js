@@ -1,22 +1,32 @@
-function checkArmstrong(num) {
+let checkArmstrong = (num) =>{
     let copy=num
+
+    let digitCount=0
+
+    while(copy!=0) {
+        digitCount++
+
+        copy=parseInt(copy/10)
+    }
+
+    copy =num
 
     let digitSum=0
 
     while(copy!=0) {
         let digit=copy%10
 
-        digitSum+=digit
+        digitSum+=Math.pow(digit, digitCount)
 
-        copy/=10
+        copy=parseInt(copy/10)
     }
 
-    let isArmstrong=(num==totalSum)
+    let isArmstrong=(num==digitSum)
 
     return isArmstrong
 }
 
-function checkPrime(num) {
+let checkPrime= (num) => {
     let isPrime=true
 
     for(let div=2; div<num; div++) {
@@ -29,3 +39,6 @@ function checkPrime(num) {
 
     return isPrime
 }
+
+console.log(checkArmstrong(153))
+console.log(checkPrime(13))
