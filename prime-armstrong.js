@@ -1,4 +1,4 @@
-let checkArmstrong = (num) =>{
+const checkArmstrong = (num) =>{
     let copy=num
 
     let digitCount=0
@@ -26,7 +26,7 @@ let checkArmstrong = (num) =>{
     return isArmstrong
 }
 
-let checkPrime= (num) => {
+const checkPrime= (num) => {
     let isPrime=true
 
     for(let div=2; div<num; div++) {
